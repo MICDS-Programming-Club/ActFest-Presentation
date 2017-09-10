@@ -1,0 +1,37 @@
+{
+  "name": "actfest-presentation",
+  "version": "1.0.0",
+  "description": "Small little localhost site to be displayed at Activities Festival to attract people to the club",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "concurrently \"gulp\" \"nodemon\" ",
+    "sass": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MICDS-Programming-Club/ActFest-Presentation.git"
+  },
+  "keywords": [
+    "MICDS",
+    "Programming",
+    "Club"
+  ],
+  "author": "Michael Gira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MICDS-Programming-Club/ActFest-Presentation/issues"
+  },
+  "homepage": "https://github.com/MICDS-Programming-Club/ActFest-Presentation#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "swarms": "^0.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "nodemon": "^1.12.0"
+  }
+}
