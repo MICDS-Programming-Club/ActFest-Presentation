@@ -1,5 +1,100 @@
-.hello-world {
-	.test {
-		display: block;
+$micds-red: #d12229;
+$micds-dark-red: #581021;
+$micds-green: #04463d;
+$micds-grey: #bcbbb6;
+
+$header-bg: #fff;
+
+* {
+	font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+	margin: 0;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 1rem;
+
+	background: $header-bg;
+	border-bottom: 1rem solid darken($header-bg, 10);
+
+	h1 {
+		height: 2.5rem;
+		color: $micds-red;
+
+		a {
+			position: relative;
+			color: $micds-dark-red;
+			text-decoration: none;
+
+			animation-name: pulse;
+			animation-duration: 500ms;
+			// animation-fill-mode: both;
+			animation-direction: alternate;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+
+			&:before {
+				content: '';
+				height: 0.25rem;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+
+				background: $micds-dark-red;
+				border-radius: 0.25rem;
+			}
+		}
+	}
+}
+
+section {
+	padding: 0 1rem;
+
+	h2 {
+		margin-top: 1rem;
+		margin-bottom: 0;
+		font-size: 5rem;
+	}
+
+	.faqs {
+		display: flex;
+
+		.faq {
+			flex-basis: 0;
+			flex-grow: 1;
+			padding: 0.5rem;
+
+			background: $micds-red;
+			border-radius: 0.25rem;
+			border-right: 0.5rem solid darken($micds-red, 10);
+			border-bottom: 0.5rem solid darken($micds-red, 10);
+			color: #fff;
+
+			&:not(:last-child) {
+				margin-right: 2.5rem;
+			}
+
+			.question {
+				font-size: 1.5rem;
+				font-weight: 700;
+				letter-spacing: 0.03rem;
+			}
+		}
+	}
+}
+
+@keyframes pulse {
+	from {
+		font-size: 1em;
+	}
+	to {
+		font-size: 1.05em;
 	}
 }
